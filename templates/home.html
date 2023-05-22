@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="main">Home page</h1>
+
+
+<div class="row_text">
+    <div class="column_text">
+        <div class="border-with-shadow">
+
+            <div class="main">
+                <h3>Update Book</h3>
+                <div class="border_text_list">
+                    <ul>
+                        {% for book_list in book_list %}
+                        <li style="font-size:125%;">
+                            {{book_list.name_book}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

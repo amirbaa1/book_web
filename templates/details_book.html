@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="main">
+    <p>
+        <button class="button" type="button">
+            <a class="button" href="{% url 'book' %}">back</a>
+        </button>
+    </p>
+    <div class="border_text_list">
+        <h2>
+            {{det_book.name_book}}
+        </h2>
+        <p>
+            <b>author : </b>{{det_book.author}}
+        </p>
+        <p>
+            <b>number_pages : </b>{{det_book.number_pages}}
+        </p>
+        <p>
+            <b>price : </b>{{det_book.price}}
+        </p>
+    </div>
+</div>
+{% endblock content %}
