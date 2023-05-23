@@ -16,6 +16,7 @@
                 <a href="{% url 'det_book' book_list.pk %}" class="link_main">
                     <div style="font-size: 120%;">
                         {{book_list.name_book}}
+                        <img src="{{ book_list.image.url }}" width="200">
                     </div>
                 </a>
             </div>
