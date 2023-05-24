@@ -5,7 +5,7 @@
 <hr class="hr">
 <div class="main">
     <div class="border_text_list">
-        <form action="" method="post" class="main">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Save" class="button">
