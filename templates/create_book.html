@@ -3,9 +3,15 @@
 
 <h2 class="main">Add Book</h2>
 <hr class="hr">
-<form action="" method="post" class="main">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save" class="button"> <a class="button_back" href="{% url 'book' %}">back</a>
-</form>
+<div class="main">
+    <div class="border_text_list">
+        <form action="" method="post" class="main">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save" class="button">
+            <a class="button_back" href="{% url 'book' %}">back</a>
+        </form>
+    </div>
+</div>
+
 {% endblock content %}

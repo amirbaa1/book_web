@@ -1,0 +1,28 @@
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/web_css.css' %}">
+</head>
+<div class="main">
+    <h1>Edit post</h1>
+    <div style="text-align: center;">
+        <div class="border_text_list">
+<!--            <div>-->
+<!--                <img src="{{ up_book.images.url }}" width="200">-->
+<!--            </div>-->
+            <br>
+            <b> {{up_book.name_book}}</b>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Update" class="button">
+                <button class="button_back" type="button">
+                    <a class="button_back" href="{% url 'book' %}">Cancel</a>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

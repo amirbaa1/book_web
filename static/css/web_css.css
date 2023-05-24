@@ -52,6 +52,10 @@ body {
     padding: 7px;
     font-size: 16px;
 }
+.button:hover {
+    background-color: #5D6D7E;
+    }
+
 .button_back{
     text-decoration: none;
     background-color: #DC3545;
@@ -60,14 +64,22 @@ body {
     padding: 7px;
     font-size: 16px;
 }
-
-.button:hover {
-    background-color: #5D6D7E;
-    }
-
 .button_back:hover {
     background-color: #CD6155;
-    }
+}
+
+.button_back_details{
+    text-decoration: none;
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    padding: 7px;
+    font-size: 16px;
+}
+
+.button_back_details:hover {
+    background-color: #5499C7;
+ }
 
 .hr{
     margin-left: 10px;

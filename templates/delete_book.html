@@ -1,0 +1,21 @@
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/web_css.css' %}">
+</head>
+
+<div class="main">
+    <div style="text-align: center;">
+        <div class="border_text_list">
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>
+                    Are you sure you want to delete <b>{{ delete.name_book }}</b>?
+                </p>
+                <input type="submit" value="Confirm" class="button">
+                <a class="button_back" href="{% url 'book' %}">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

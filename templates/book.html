@@ -16,7 +16,11 @@
                 <a href="{% url 'det_book' book_list.pk %}" class="link_main">
                     <div style="font-size: 120%;">
                         {{book_list.name_book}}
+                        {% if book_list.image %}
                         <img src="{{ book_list.image.url }}" width="200">
+                        {% else %}
+                        <p>No image available.</p>
+                        {% endif %}
                     </div>
                 </a>
             </div>

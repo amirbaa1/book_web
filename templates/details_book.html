@@ -1,29 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="main">
-    <p>
-        <button class="button" type="button">
-            <a class="button" href="{% url 'book' %}">back</a>
-        </button>
-    </p>
-    <div class="border_text_list">
-        <h2>
-            {{det_book.name_book}}
-        </h2>
-        <div>
-            <img src="{{ det_book.image.url }}" width="200">
+<div style="text-align: center;">
+    <div class="main">
+        <div style="text-align: center;">
+            <div class="border_text_list">
+                <h2>
+                    {{det_book.name_book}}
+                </h2>
+                <div>
+                    {% if det_book.image %}
+                    <img src="{{ det_book.image.url }}" width="200">
+                    {% else %}
+                    <p>No image available.</p>
+                    {% endif %}
+                </div>
+                <p>
+                    <b>author : </b>{{det_book.author}}
+                </p>
+                <p>
+                    <b>number_pages : </b>{{det_book.number_pages}}
+                </p>
+                <p>
+                    <b>price : </b>{{det_book.price}}
+                </p>
+                <a href="{% url 'update_book' det_book.pk %}" class="button">+ Edit Book</a>
+                <a class="button_back" href="{% url 'delete_book' det_book.pk %}">- Delete Book</a>
+                <button class="button_back_details" type="button">
+                    <a class="button_back_details" href="{% url 'book' %}">back</a>
+                </button>
+            </div>
         </div>
-        <p>
-            <b>author : </b>{{det_book.author}}
-        </p>
-        <p>
-            <b>number_pages : </b>{{det_book.number_pages}}
-        </p>
-        <p>
-            <b>price : </b>{{det_book.price}}
-        </p>
     </div>
 </div>
 {% endblock content %}
