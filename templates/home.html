@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="main">Home page</h1>
 
+<div class="main" style="padding-left:200px;">
+    <h1>Home page</h1>
+    <div class="row_text">
+        <div class="column_text">
+            <div class="border-with-shadow">
 
-<div class="row_text">
-    <div class="column_text">
-        <div class="border-with-shadow">
-
-            <div class="main">
-                <h3>Update Book</h3>
-                <div class="border_text_list">
-                    <ul>
-                        {% for book_view in book_view %}
-                        <li style="font-size:125%;">
-                            {{book_view.name_book}}
-                        </li>
-                        {% endfor %}
-                    </ul>
+                <div class="main">
+                    <h3>Update Book</h3>
+                    <div class="border_text_list">
+                        <ul>
+                            {% for book_view in book_view %}
+                            <li style="font-size:125%;">
+                                {{book_view.name_book}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h1 class="main">Book page</h1>
-<div class="main">
-    <button class="button">
-        <a class="button" href="{% url 'create_book' %}">+ add book</a>
-    </button>
-</div>
-<hr>
-<div class="main">
+<div class="main" style="padding-left:200px; padding-left:50px;">
+    <h1>Book page</h1>
+    <div>
+        <button class="button">
+            <a class="button" href="{% url 'create_book' %}">+ add book</a>
+        </button>
+    </div>
     <div class="container">
         {% for book_list in book_list %}
         <div class="column_text">
             <div class="border_text_list">
                 <a href="{% url 'det_book' book_list.pk %}" class="link_main">
                     <div style="font-size: 120%;">
-                        {{book_list.name_book}}
                         {% if book_list.image %}
                         <img src="{{ book_list.image.url }}" width="200">
                         {% else %}
                         <p>No image available.</p>
                         {% endif %}
+                        <div style="text-align:center;">
+                        {{book_list.name_book}}
+                        </div>
                     </div>
                 </a>
             </div>
@@ -28,5 +28,6 @@
         {% endfor %}
     </div>
 </div>
+
 
 {% endblock content %}

@@ -51,35 +51,7 @@ body {
     float: none;
   }
 }
---------------------------
 
-.side {
-  width: 130px;
-  position: fixed;
-  z-index: 1;
-  top: 20px;
-  left: 10px;
-  background:#2C3E50;
-  overflow-x: hidden;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-right:3px;
-  padding-left:3px;
-}
-
-.side a {
-  padding:5px 8px 7px 10px;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
-  color:#FFFFFF;
-}
-
-.side a:hover{
-    background-color:#566573;
-    padding-left:1.5px;
-}
--------------------
 .main {
   margin-left: 240px;
 }

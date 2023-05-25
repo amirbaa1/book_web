@@ -14,6 +14,7 @@ class BookList(ListView):
     model = Book
     template_name = 'book.html'
     context_object_name = 'book_list'
+    ordering = ['-id']
 
 
 class AboutPage(TemplateView):

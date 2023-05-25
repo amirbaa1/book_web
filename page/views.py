@@ -7,6 +7,7 @@ class HomePage(ListView):
     model = Book
     template_name = 'home.html'
     context_object_name = 'book_view'
+    ordering = ['-id']
 
 
 class AboutPage(TemplateView):
