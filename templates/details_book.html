@@ -25,6 +25,14 @@
                 <p>
                     <b>price : </b>{{det_book.price}}
                 </p>
+                <div>
+                    {% if det_book.text %}
+                    <p><b>Text : </b>{{det_book.text}}</p>
+                    {% else %}
+                    <p><b>Text : </b> No Text available.</p>
+                    {% endif %}
+                </div>
+                <br>
                 <a href="{% url 'update_book' det_book.pk %}" class="button">+ Edit Book</a>
                 <a class="button_back" href="{% url 'delete_book' det_book.pk %}">- Delete Book</a>
                 <button class="button_back_details" type="button">

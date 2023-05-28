@@ -7,6 +7,7 @@ class Book(models.Model):
     author = models.CharField(max_length=60)
     number_pages = models.IntegerField()
     price = models.IntegerField()
+    text = models.TextField(max_length=300, null=True, blank=True)
     image = models.ImageField(null=True, blank=True, upload_to="images/%y")
 
     def __str__(self):
